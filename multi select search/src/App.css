@@ -1,0 +1,28 @@
+.search{
+ 
+
+  max-width: 800px;
+  outline: 0;
+  border: 0;
+  margin: 40px auto;
+
+
+}
+
+input{
+    width:900px;
+    height: 30px;
+    border-radius: 29px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.suggestions{
+    display: flex;
+    position: relative;
+    border:2px solid red;
+    height: 200px;
+    max-height: 600px;
+    width: 200px;
+    overflow-y: scroll;
+}
