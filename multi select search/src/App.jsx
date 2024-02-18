@@ -5,6 +5,7 @@ import './App.css'
 function App() {
    const[inpVal,setInpVal]=useState("");
    const [suggestion,setSuggestion]=useState([]);
+   const [selectedUsers,setSelectedUsers]=useState([]);
 
 
    useEffect(()=>{
@@ -22,6 +23,11 @@ function App() {
      searchusers();
    },[inpVal])
 
+   const  handleSelectusers=(user)=>{
+    setSelectedUsers([...selectedUsers,user]);
+    setInpVal("");setSuggestion([]);
+    console.log(selectedUsers);
+   }
   
     
   return (
@@ -30,17 +36,19 @@ function App() {
         <div className="search">
           <input value={inpVal} onChange={(e)=>{setInpVal(e.target.value)}} type="text" placeholder="search for users..." />
           
-        <div className="suggestions">
+        <div className="suggestions-list">
             <ul>
-            {suggestion.length>0?suggestion.map((user)=>{
+            {suggestion?.users?.map((user)=>{
               return  (
                 <li
-                  key={user.email}
+                key={user.email}
+                onClick={()=>handleSelectusers(user)}
                 >
-                  {user.email}
+                  <img src={user.image} alt={`${user.firstName} ${user.lastName}`} />
+                 <span>{user.firstName} {user.lastName}</span> 
                 </li>
-              ) 
-            }):<li>no</li>}
+              ); 
+            })}
             </ul>
         </div>
         </div>
