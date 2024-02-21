@@ -1,0 +1,76 @@
+.review-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.review {
+  border: 1px solid #ccc;
+  padding: 25px;
+  /* margin-bottom: 25px; */
+}
+
+.user {
+  display: flex;
+  align-items: center;font-weight: bold;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.star {
+  color: gold;
+  font-size: 20px;
+}
+
+.date {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.star {
+  color: #ccc; /* Default color for hollow stars */
+  font-size: 20px;
+}
+
+.star.golden {
+  color: gold; /* Color for golden stars */
+}
+
+.Positive{
+  background-color:#D9F2DD ;
+}
+
+.Negative{
+  background-color:#F2DBD9 ;
+}
+.Mixed{
+  background-color: #e8bd6d3d;
+}
+.Neutral{
+  background-color: #eaf09b6b;
+}
+.tooltipc{
+  font-size: medium;
+  text-decoration: solid;font-weight: bold;
+
+}
+.datesentiment{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: solid;
+  text-decoration-style: solid;
+
+}
